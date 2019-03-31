@@ -29,6 +29,8 @@ public class MyConvertController {
 		ModelAndView mv = new ModelAndView();
 		age = age + year;
 		pt.move(move);
+		mv.addObject("year",year);
+		mv.addObject("move",move);
 		mv.addObject("age",age);
 		mv.addObject("pt",pt);
 		mv.setViewName("conv");

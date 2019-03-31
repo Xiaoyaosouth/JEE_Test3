@@ -6,8 +6,8 @@
 <title>类型转换结果页面</title>
 </head>
 <body>
-	<p>你十年后的年龄是：${requestScope.age }</p>
-	<p>移动后的点是：${requestScope.pt }</p>
+	<p>你${requestScope.year}年后的年龄是：${requestScope.age }</p>
+	<p>移动${requestScope.move}格后的点是：${requestScope.pt }</p>
 	<input type="button" value="返回" onClick="location='index.jsp'"/>
 </body>
 </html>
