@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h3>服务器出错啦~</h3>
-	<input type="button" value="返回主页" onClick="location='index.html'"/>
+	${exception }
+	<input type="button" value="返回主页" onClick="location='index.jsp'"/>
 	<br>
 </body>
 </html>

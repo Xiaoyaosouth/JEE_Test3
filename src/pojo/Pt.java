@@ -1,8 +1,12 @@
 package pojo;
 
+/**
+ * 点对象pojo
+ */
 public class Pt {
 	private int x;
 	private int y;
+	private int move; // 记录要移动的格数
 
 	public int getX() {
 		return x;
@@ -20,23 +24,23 @@ public class Pt {
 		this.y = y;
 	}
 
-	/**
-	 * x,y各移动3格
-	 */
-	public void moveThree() {
-		x = x + 3;
-		y = y + 3;
+	public int getMove() {
+		return move;
 	}
-	
+
+	public void setMove(int move) {
+		this.move = move;
+	}
+
 	/**
 	 * x,y各移动几格
-	 * @param move 要移动的格数
 	 */
-	public void move(int move) {
+	public void doMove() {
 		x = x + move;
 		y = y + move;
 	}
 
+	@Override
 	public String toString() {
 		return Integer.toString(x) + "," + Integer.toString(y);
 	}

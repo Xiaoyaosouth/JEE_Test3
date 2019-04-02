@@ -1,8 +1,7 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import pojo.UserPojo;
@@ -10,7 +9,7 @@ import pojo.UserPojo;
 @Controller
 public class UserController {
 
-	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/login.do")
 	public ModelAndView userLogin(UserPojo userPojo) {
 		ModelAndView mv = new ModelAndView();
 		if (userPojo.getUserName().equals("admin") && userPojo.getPassword().equals("123456")) {
