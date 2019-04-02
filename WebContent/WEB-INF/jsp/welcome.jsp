@@ -9,5 +9,6 @@
 	欢迎登录！<br>
 	<p>用户名：${userName }</p>
 	<p>密码：${password }</p>
+	<input type="button" value="返回" onClick="location='index.jsp'"/>
 </body>
 </html>
