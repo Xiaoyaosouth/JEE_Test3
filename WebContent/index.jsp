@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="login.do" method="post">
-		<table>
+		<table align="center">
 			<caption>
 				<h3>用户登录</h3>
 			</caption>
