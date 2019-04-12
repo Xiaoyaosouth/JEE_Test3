@@ -21,17 +21,21 @@ public class ValidateController {
 	
 	@RequestMapping("/annotation")
 	public ModelAndView annotationValidate(@Valid Transaction trans, Errors errors) {
+		ModelAndView mv = new ModelAndView();
+		StringBuilder sb = new StringBuilder();
 		// 是否存在错误
 		if(errors.hasErrors()) {
 			// 获取错误信息
 			List<FieldError> errorList = errors.getFieldErrors();
 			for(FieldError error : errorList) {
 				// 打印字段错误信息
-				System.err.println("fied :"+error.getField()+"\t"+"msg:"+error.getDefaultMessage());
+				String err = "fied :"+error.getField()+"\t"+"msg:"+error.getDefaultMessage();
+				System.err.println(err);
+				sb.append(err);
 			}
 		}
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("validatorForm");
+		mv.addObject("exception", sb.toString());
+		mv.setViewName("validatedError");
 		return mv;
 	}
 }
